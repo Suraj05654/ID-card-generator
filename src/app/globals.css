@@ -1,0 +1,133 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Font family is set via Tailwind's font-body class in layout.tsx */
+}
+
+@layer base {
+  :root {
+    --background: 210 20% 95%; /* Light gray #F0F2F5 */
+    --foreground: 210 10% 23%; /* Dark gray for text */
+
+    --muted: 210 15% 88%;
+    --muted-foreground: 210 10% 45%;
+
+    --popover: 210 20% 100%; /* White for popovers for contrast */
+    --popover-foreground: 210 10% 23%;
+
+    --card: 210 20% 100%; /* White for cards */
+    --card-foreground: 210 10% 23%;
+
+    --border: 210 10% 85%;
+    --input: 210 10% 90%;
+
+    --primary: 202 66% 62%; /* Muted blue #5DADE2 - Default theme primary */
+    --primary-foreground: 210 20% 98%; /* Light color for text on primary */
+
+    --secondary: 210 15% 90%; 
+    --secondary-foreground: 210 10% 15%;
+
+    --accent: 165 50% 74%; 
+    --accent-foreground: 165 30% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 202 66% 55%;
+
+    --radius: 0.5rem;
+
+    /* ECR ID Connect Specific Theme Variables */
+    --header-background: 200 65% 34%; /* Dark blue-green #1e6091 */
+    --header-foreground: 0 0% 100%;   /* White */
+
+    --form-section-employee-bg: 120 60% 95%; /* Light green #e8f5e8 */
+    --form-section-family-bg: 270 100% 97%;  /* Light purple #f0e6ff */
+    --form-section-additional-bg: 210 100% 97%;/* Light blue #e6f3ff */
+
+    --status-gaz-bg: 120 73% 88%;    /* Light green for Gazetted status card */
+    --status-nongaz-bg: 340 100% 94%; /* Light pink for Non-Gazetted status card */
+    
+    /* Sidebar specific theme variables (can be same as main or distinct) */
+    --sidebar-background: 210 15% 92%; /* Slightly off-white/light-gray */
+    --sidebar-foreground: 210 10% 23%; /* Dark gray for text */
+    --sidebar-primary: 202 66% 62%; /* Muted blue for active item background */
+    --sidebar-primary-foreground: 210 20% 98%; /* Light text for active item */
+    --sidebar-accent: 210 15% 85%; /* Hover background for items */
+    --sidebar-accent-foreground: 210 10% 15%; /* Hover text color */
+    --sidebar-border: 210 10% 80%; /* Border color for sidebar */
+    --sidebar-ring: 202 66% 55%; /* Focus ring */
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 210 10% 12%; 
+    --foreground: 210 20% 95%;
+
+    --muted: 210 10% 20%;
+    --muted-foreground: 210 15% 60%;
+
+    --popover: 210 10% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --card: 210 10% 10%;
+    --card-foreground: 210 20% 95%;
+
+    --border: 210 10% 25%;
+    --input: 210 10% 22%;
+
+    --primary: 202 66% 62%; 
+    --primary-foreground: 210 10% 5%;
+
+    --secondary: 210 10% 25%;
+    --secondary-foreground: 210 20% 95%;
+
+    --accent: 165 50% 74%;
+    --accent-foreground: 165 30% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 202 66% 55%;
+
+    /* ECR ID Connect Dark Theme Variables */
+    --header-background: 200 65% 24%; 
+    --header-foreground: 0 0% 90%; 
+
+    --form-section-employee-bg: 120 30% 20%; 
+    --form-section-family-bg: 270 40% 22%;   
+    --form-section-additional-bg: 210 40% 22%;
+
+    --status-gaz-bg: 120 40% 30%; 
+    --status-nongaz-bg: 340 40% 32%;
+    
+    /* Dark Sidebar specific theme variables */
+    --sidebar-background: 210 10% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 202 66% 62%;
+    --sidebar-primary-foreground: 210 10% 5%;
+    --sidebar-accent: 210 10% 20%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 210 10% 25%;
+    --sidebar-ring: 202 66% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
